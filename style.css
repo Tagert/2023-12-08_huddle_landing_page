@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 :root {
   --primary-border-radius: 20px;
   --primary-box-shadow: 1px 1px 10px 6px rgb(212, 207, 207, 0.2);
   --open-sans: "Open Sans", sans-serif;
   --poppins: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,8 +20,15 @@ body {
   font-size: 18px;
 }
 
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .top-page {
-  height: 90vh;
   width: 100%;
   background-image: url(./images/bg-hero-desktop.svg);
   background-size: cover;
@@ -41,7 +48,7 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-area: 1 / 1 / 2 / 3;
   align-items: center;
-  padding: 0px 200px 0px 200px;
+  /* padding: 0px 200px 0px 200px; */
 }
 
 .navbar img {
@@ -71,7 +78,7 @@ body {
   grid-template-rows: 60px 60px 100px 100px;
   place-items: center start;
   gap: 5px;
-  padding: 120px 50px 100px 200px;
+  /* padding: 120px 50px 100px 200px; */
 }
 
 .left-description h2:first-child {
@@ -113,6 +120,7 @@ body {
 .right-image {
   width: 100%;
   height: 100%;
+  padding-bottom: 20px;
 }
 
 .right-image img {
@@ -376,14 +384,13 @@ body {
 
 @media screen and (max-width: 1425px) {
   .top-page {
-    height: 140vh;
+    /* height: 140vh; */
     width: 100%;
   }
   .grid-container-top {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    height: 100%;
+    grid-template-rows: 135px 1fr 1fr;
   }
 
   .navbar {
@@ -392,7 +399,7 @@ body {
     grid-template-rows: 1fr;
     grid-area: 1 / 1 / 2 / 2;
     align-items: center;
-    padding: 50px 200px 0px 200px;
+    padding: 20px 200px 0px 200px;
   }
 
   .left-description {
@@ -432,7 +439,6 @@ body {
 
 @media screen and (max-width: 1200px) {
   .top-page {
-    height: 130vh;
     width: 100%;
   }
 
@@ -461,7 +467,7 @@ body {
   }
 
   .build h3 {
-    font-size: 26px;
+    font-size: 25px;
   }
 
   .location p {
@@ -470,4 +476,156 @@ body {
 }
 
 @media screen and (max-width: 1000px) {
+  .navbar {
+    padding: 0px 50px 0px 150px;
+  }
+
+  .left-description {
+    padding: 20px 50px 20px 150px;
+    margin-bottom: 20px;
+  }
+
+  .left-description h2:first-child {
+    font-size: 35px;
+  }
+
+  .left-description h2:nth-child(2) {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .left-description p {
+    padding-right: 200px;
+  }
+
+  .left-description button {
+    place-self: end start;
+  }
+
+  .right-image img {
+    margin: 0px 50px 100px 150px;
+  }
+
+  .text-content {
+    padding: 0px 15px 0px 15px;
+  }
+
+  .left-text-content {
+    padding: 0px 15px 0px 15px;
+  }
+
+  .together img,
+  .users img {
+    height: 240px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .conversations img {
+    height: 240px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .build h3 {
+    font-size: 20px;
+  }
+
+  .build button {
+    width: 300px;
+    height: 70px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    padding: 0px 50px 0px 120px;
+  }
+
+  .left-description {
+    padding: 20px 50px 20px 120px;
+  }
+
+  .right-image img {
+    height: 320px;
+    margin: 0px 50px 100px 120px;
+  }
+
+  .nav-btn {
+    place-self: center end;
+  }
+
+  .main-content {
+    padding: 0px 40px 0px 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    padding: 0px 50px 0px 80px;
+  }
+
+  .left-description {
+    padding: 20px 50px 20px 80px;
+  }
+
+  .right-image img {
+    height: 300px;
+    margin: 0px 50px 100px 80px;
+  }
+  .nav-btn {
+    justify-self: center;
+    height: 40px;
+    width: 150px;
+  }
+
+  .left-description h2:first-child {
+    font-size: 30px;
+  }
+
+  .left-description h2:nth-child(2) {
+    font-size: 30px;
+  }
+
+  .build h3 {
+    font-size: 16px;
+  }
+
+  .left-description p {
+    font-size: 15px;
+  }
+
+  .build button {
+    width: 200px;
+    height: 55px;
+    font-size: 15px;
+  }
+
+  .text-content h3 {
+    font-size: 22px;
+  }
+
+  .text-content p {
+    font-size: 18px;
+    color: hsl(208, 11%, 55%);
+  }
+
+  .together img,
+  .users img {
+    height: 200px;
+  }
+
+  .conversations img {
+    height: 200px;
+  }
+
+  .location p,
+  .mobile-number p,
+  .email p {
+    font-size: 14px;
+    font-family: var(--open-sans);
+    padding-right: 85px;
+    color: #c5d7d8;
+  }
 }
